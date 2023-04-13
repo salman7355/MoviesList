@@ -11,15 +11,10 @@ function ActionBar({ getFilteredMovie }) {
   };
 
   return (
-    <Navbar bg="dark">
+    <Navbar bg="white" className="shadow">
       <Container>
-        <Link to={"/"}>
-          <Navbar.Brand
-            className="text-light"
-            style={{ textDecoration: "none" }}
-          >
-            MoVV
-          </Navbar.Brand>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <Navbar.Brand>MoVV</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

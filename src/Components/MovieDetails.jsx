@@ -21,32 +21,34 @@ const MovieDetails = () => {
   }, []);
 
   return (
-    <div>
-      <div className="d-flex justify-content-center mt-5">
-        <Card style={{ width: "38rem" }}>
-          <Card.Img
-            src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`}
-          />
-          <Card.Body>
-            <Card.Title>{detail.title}</Card.Title>
-            <Card.Text>{detail.release_date}</Card.Text>
-            <Card.Text>{detail.vote_count}</Card.Text>
-            <Card.Text>{detail.vote_average}</Card.Text>
-            {/* we 3ayz a7ot ngoom */}
-          </Card.Body>
-        </Card>
+    <div className="d-flex bg-dark text-white">
+      <div className="d-flex justify-content-start ">
+        <Card.Img
+          className="shadow"
+          style={{ width: "28rem", height: "91vh", borderRadius: "4px" }}
+          src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`}
+        />
       </div>
-      <div>
-        <h2>Story</h2>
-        <p>{detail.overview}</p>
-      </div>
-      <div className="d-flex justify-content-evenly">
-        <a href={detail.homepage}>
-          <Button variant="warning">Watch Movie</Button>
-        </a>
-        <Link to={"/"}>
-          <Button variant="warning">Back Home</Button>
-        </Link>
+      <div className="text">
+        <div className="mt-4">
+          <h1 style={{ textAlign: "center" }}>{detail.title}</h1>
+          <p className="mt-3 mb-3">{detail.release_date}</p>
+          <p>Rate : {detail.vote_average}</p>
+        </div>
+        <div>
+          <div className="mt-5 m-4 text-justify">
+            <h2>Story</h2>
+            <p style={{ lineHeight: 2 }}>{detail.overview}</p>
+          </div>
+          <div className="d-flex justify-content-between m-4 align-items-end">
+            <a href={detail.homepage} target="_blanck">
+              <Button variant="warning">Watch Movie</Button>
+            </a>
+            <Link to={"/"}>
+              <Button variant="warning">Back Home</Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
