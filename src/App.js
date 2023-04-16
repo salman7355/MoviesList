@@ -5,8 +5,6 @@ import ActionBar from "./Components/ActionBar";
 import MoviesList from "./Components/MoviesList";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import MovieDetails from "./Components/MovieDetails";
-import Try from "./Components/Try";
-import Movie from "./Components/Movie";
 
 function App() {
   const [Movies, setMovies] = useState([]);
