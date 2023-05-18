@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import axios from "axios";
+// import axios from "axios";
 import ActionBar from "./Components/ActionBar";
 import MoviesList from "./Components/MoviesList";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MovieDetails from "./Components/MovieDetails";
 
 function App() {
-  const [Movies, setMovies] = useState([]);
-  const [totalPages, setTotal] = useState(0);
+  const [Movies ] = useState([]);
+  const [totalPages] = useState(0);
 
-  const getMovies = async () => {
-    // const res = await axios.get(
-    //   "https://api.themoviedb.org/3/movie/popular?api_key=39d997a6757716f9936f001f6441d497&language=en-US"
-    // );
-    // setMovies(res.data.results);
-    // //console.log(res.data.total_pages);
-    // setTotal(res.data.total_pages);
-  };
+  // const getMovies = async () => {
+  //   // const res = await axios.get(
+  //   //   "https://api.themoviedb.org/3/movie/popular?api_key=39d997a6757716f9936f001f6441d497&language=en-US"
+  //   // );
+  //   // setMovies(res.data.results);
+  //   // //console.log(res.data.total_pages);
+  //   // setTotal(res.data.total_pages);
+  // };
 
   useEffect(() => {
     //getMovies();

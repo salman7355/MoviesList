@@ -17,8 +17,8 @@ const MovieDetails = () => {
   };
 
   useEffect(() => {
-    getSpecificMovie();
-  }, []);
+    getSpecificMovie().then(r => console.log(r));
+  } );
 
   return (
     <div className="d-flex bg-dark text-white">

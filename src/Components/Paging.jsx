@@ -1,5 +1,5 @@
 import ReactPaginate from "react-paginate";
-import Pagination from "react-bootstrap/Pagination";
+// import Pagination from "react-bootstrap/Pagination";
 
 function Paging({ getPages, totalPages }) {
   const handlePageClick = (data) => {
