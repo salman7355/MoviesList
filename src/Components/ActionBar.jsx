@@ -3,11 +3,18 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { getFilteredMovies, getMovies } from "../Redux/MovieSlice";
 
-function ActionBar({ getFilteredMovie }) {
-  const onSearch = (word) => {
-    getFilteredMovie(word);
+function ActionBar() {
+  const dispatch = useDispatch();
+  const Search = (word) => {
+    if (word === "") {
+      dispatch(getMovies());
+    } else {
+      dispatch(getFilteredMovies(word));
+    }
   };
 
   return (
@@ -25,7 +32,7 @@ function ActionBar({ getFilteredMovie }) {
           ></Nav>
           <Form className="d-flex">
             <Form.Control
-              onChange={(e) => onSearch(e.target.value)}
+              onChange={(e) => Search(e.target.value)}
               type="search"
               placeholder="Search"
               className="me-2"
