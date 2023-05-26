@@ -11,6 +11,41 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.MovieImg {
+  width: "28rem";
+  height: "91vh";
+  border-radius: "4px";
+}
+
+@media (min-width: 1027px) {
+  .movie-wrap {
+    /* height: "91vh"; */
+    padding: 60px;
+  }
+}
+
+@media (max-width: 1027px) {
+  .movie-wrap {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .MovieImg {
+    height: 56vh;
+    border-radius: 4px;
+    width: -webkit-fill-available;
+  }
+}
+
+@media (max-width: 1027px) {
+  .MovieImg {
+    height: 80vh;
+    border-radius: 4px;
+    width: -webkit-fill-available;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -15,15 +15,15 @@ function Paging() {
   // Api with wrong data after page 500 no movies
 
   return (
-    <div className="d-flex justify-content-center m-3">
+    <div className="d-flex justify-content-center m-3 ">
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={pageClick}
         marginPagesDisplayed={2}
         pageRangeDisplayed={2}
         pageCount={pages}
-        previousLabel="< previous"
+        previousLabel="<"
         renderOnZeroPageCount={null}
         containerClassName={"pagination"}
         pageClassName={"page-item"}

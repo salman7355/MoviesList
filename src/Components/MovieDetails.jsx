@@ -17,15 +17,14 @@ const MovieDetails = () => {
   };
 
   useEffect(() => {
-    getSpecificMovie().then(r => console.log(r));
-  } );
+    getSpecificMovie().then((r) => console.log(r));
+  });
 
   return (
-    <div className="d-flex bg-dark text-white">
-      <div className="d-flex justify-content-start ">
+    <div className="d-flex bg-dark text-white movie-wrap">
+      <div className="d-flex justify-content-start">
         <Card.Img
-          className="shadow"
-          style={{ width: "28rem", height: "91vh", borderRadius: "4px" }}
+          className="MovieImg"
           src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`}
         />
       </div>
